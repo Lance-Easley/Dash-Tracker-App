@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="client">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Main">
+        <activity android:name=".RecordOrder" />
+        <activity android:name=".ShowOrders" />
+        <activity android:name=".DeleteOrder" />
+        <activity android:name=".SearchMenu" />
+        <activity android:name=".search.MostOrders" />
+        <activity android:name=".search.BestRatings" />
+        <activity android:name=".search.MostMoney" />
+        <activity android:name=".search.FastestOrders" />
+        <activity android:name=".search.BestHours" />
+        <activity android:name=".MainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

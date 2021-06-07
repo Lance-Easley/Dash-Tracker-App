@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextRestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:ems="10"
+            android:hint="@string/restaurant_name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editDecimalPay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="Name" />
+
+        <EditText
+            android:id="@+id/editDecimalPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:ems="10"
+            android:hint="@string/pay"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/editTimeOrderTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRestaurantName"
+            android:autofillHints="Decimal" />
+
+        <EditText
+            android:id="@+id/editTimeOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:ems="10"
+            android:hint="@string/time_of_order"
+            android:inputType="time"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDayOfWeek"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDecimalPay"
+            android:autofillHints="String" />
+
+        <RatingBar
+            android:id="@+id/editRating"
+            android:theme="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRecordOrderSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPrepPerformance" />
+
+        <EditText
+            android:id="@+id/editTextDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/day_of_week"
+            android:inputType="textPersonName"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTimeCompleteTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTimeOrderTime"
+            android:autofillHints="String" />
+
+        <EditText
+            android:id="@+id/editTimeCompleteTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/complete_time"
+            android:inputType="time"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editDecimalMiles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDayOfWeek"
+            android:autofillHints="String" />
+
+        <EditText
+            android:id="@+id/editDecimalMiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/miles_traveled"
+            android:inputType="numberDecimal"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPrepPerformance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTimeCompleteTime"
+            android:autofillHints="Decimal" />
+
+        <EditText
+            android:id="@+id/editTextPrepPerformance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/food_prep_performance"
+            android:inputType="textPersonName"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editRating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDecimalMiles"
+            android:autofillHints="String" />
+
+        <Button
+            android:id="@+id/btnRecordOrderSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/submit"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editRating"
+            android:onClick="btnRecordOrderSubmit"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

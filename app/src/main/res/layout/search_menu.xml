@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchMenu">
+
+    <TextView
+        android:id="@+id/txtSearchMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/search_menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSearchMenu">
+
+        <Button
+            android:id="@+id/btnMostOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mostOrdersActivity"
+            android:text="@string/most_orders"
+            android:textColor="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toTopOf="@+id/btnBestRatings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBestRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="bestRatingsActivity"
+            android:text="@string/best_dasher_ratings"
+            android:textColor="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toTopOf="@+id/btnMostMoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMostOrders" />
+
+        <Button
+            android:id="@+id/btnMostMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mostMoneyActivity"
+            android:text="@string/most_money_earned"
+            android:textColor="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toTopOf="@+id/btnFastestRestaurants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBestRatings" />
+
+        <Button
+            android:id="@+id/btnFastestRestaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fastestOrdersActivity"
+            android:text="@string/fastest_restaurants"
+            android:textColor="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toTopOf="@+id/btnBestHours"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMostMoney" />
+
+        <Button
+            android:id="@+id/btnBestHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="bestHoursActivity"
+            android:text="@string/best_hours"
+            android:textColor="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFastestRestaurants" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
